@@ -1,0 +1,21 @@
+{
+    "loader": {
+        "Home": ""
+    },
+    "controllers.home": {
+        "Welcome": "",
+        "Upgrade to Premium and get exciting rewards.": "",
+        "You are using free version of Hubleto. Certain features are unavailable.": "",
+        "Upgrade to Premium": ""
+    },
+    "manifest": {
+        "Dashboard": "",
+        "...": "",
+        "Desktop": "Desktop",
+        "Default Hubleto desktop implementation": "",
+        "Default Hubleto desktop implementation.": "Standard -Hubleto -Desktop -Implementierung."
+    },
+    "Controllers\\Home": {
+        "Welcome": "Willkommen"
+    }
+}
