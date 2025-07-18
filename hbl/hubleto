@@ -2,8 +2,8 @@
 
 if (php_sapi_name() !== 'cli') exit;
 
-if (is_file("vendor/autoload.php")) require_once("vendor/autoload.php");
-else if (is_file("../vendor/autoload.php")) require_once("../vendor/autoload.php");
+if (is_file(__DIR__ . "/vendor/autoload.php")) require_once(__DIR__ . "/vendor/autoload.php");
+else if (is_file(__DIR__ . "/../vendor/autoload.php")) require_once(__DIR__ . "/../vendor/autoload.php");
 
 require_once("src/Main.php");
 

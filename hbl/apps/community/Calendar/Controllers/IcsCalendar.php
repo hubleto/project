@@ -3,6 +3,7 @@
 namespace HubletoApp\Community\Calendar\Controllers;
 
 use _PHPStan_ac6dae9b0\Nette\Utils\DateTime;
+use HubletoApp\Community\Calendar\Models\RecordManagers\SharedCalendar;
 
 class IcsCalendar extends \HubletoMain\Core\Controllers\Controller
 {
@@ -18,33 +19,56 @@ class IcsCalendar extends \HubletoMain\Core\Controllers\Controller
 
   public function render(array $params): string
   {
-    $ics = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:Hubleto " . "GET ORG NAME" . "\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH";
+    $ics = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:Hubleto " . $this->app->config->getAsString('accountFullName') . "\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH\n";
     $events = "";
     $calendarManager = $this->main->apps->community('Calendar')->calendarManager;
-    foreach ($calendarManager->getCalendars() as $calendarClass => $calendar) {
-      if ($calendarClass == "HubletoApp\Community\CalendarSync\Calendar") continue;
-      foreach ($calendar->loadEvents((new \DateTime("now"))->format("Y-m-d H:i:s"), (new \DateTime("+1 year"))->format("Y-m-d H:i:s")) as $event) {
-        $dtStart = (new \DateTime($event['start']))->setTimezone(new \DateTimeZone('UTC'))->format('Ymd\THis\Z');
-        $dtEnd = (new \DateTime($event['end'] ?? $dtStart))->setTimezone(new \DateTimeZone('UTC'))->format('Ymd\THis\Z');
 
-        if ($event['allDay'] ?? false) {
-          $dtEnd = (new \DateTime(date('Y-m-d H:i:s', strtotime('tomorrow') - 1)))->setTimezone(new \DateTimeZone('UTC'))->format('Ymd\THis\Z');
-        }
+    $calendarKey = $this->app->getUrlParams()['key'];
 
-        $uid = uniqid() . '@example.com';
+    $mSharedCalendars = new SharedCalendar();
+    $sharedCalendar = $mSharedCalendars->where('share_key', $calendarKey)->where('enabled', true)->first();
 
-        $ics .= "BEGIN:VEVENT\r\n";
-        $ics .= "UID:$uid\r\n";
-        $ics .= "SEQUENCE:0\r\n";
-        $ics .= "STATUS:CONFIRMED\r\n";
-        $ics .= "TRANSP:OPAQUE\r\n";
+    if ($sharedCalendar == null) $this->app->router->redirectTo('/404');
+    $calendarSource = $sharedCalendar->get('calendar')[0]['calendar'];
+
+    // permissions
+    $viewDetails = $sharedCalendar->get('view_details')->toArray()[0]['view_details'];
+    $dateFrom = $sharedCalendar->get('date_from')->toArray()[0]['date_from'] ?? (new \DateTime("now"))->format("Y-m-d H:i:s");
+    $dateTo = $sharedCalendar->get('date_to')->toArray()[0]['date_to'] ?? (new \DateTime("+1 year"))->format("Y-m-d H:i:s");
+
+    $calendar = $calendarManager->getCalendar($calendarSource);
+
+    foreach ($calendar->loadEvents($dateFrom, $dateTo) as $event) {
+      $dtStart = (new \DateTime($event['start']))->setTimezone(new \DateTimeZone('UTC'))->format('Ymd\THis\Z');
+
+      if ($event['allDay'] ?? false) {
+        $dtEnd = (new \DateTime($event['start']))
+          ->setTimezone(new \DateTimeZone('UTC'))
+          ->setTime(23, 59, 59)
+          ->format('Ymd\THis\Z');
+      } else {
+        $dtEnd = (new \DateTime($event['end'] ?? $event['start']))
+          ->setTimezone(new \DateTimeZone('UTC'))
+          ->format('Ymd\THis\Z');
+      }
+
+      $uid = uniqid();
+
+      $ics .= "BEGIN:VEVENT\r\n";
+      $ics .= "UID:$uid\r\n";
+      $ics .= "SEQUENCE:0\r\n";
+      $ics .= "STATUS:CONFIRMED\r\n";
+      $ics .= "TRANSP:OPAQUE\r\n";
+      if ($viewDetails) {
         $ics .= "SUMMARY:" . addcslashes($event['title'], ",;") . "\r\n";
-        $ics .= "DTSTART:$dtStart\r\n";
-        $ics .= "DTEND:$dtEnd\r\n";
+      }
+      $ics .= "DTSTART:$dtStart\r\n";
+      $ics .= "DTEND:$dtEnd\r\n";
+      if ($viewDetails) {
         $ics .= "LOCATION:" . addcslashes($event['type'], ",;") . "\r\n";
         $ics .= "DESCRIPTION:" . addcslashes($event['title'], ",;") . "\r\n";
-        $ics .= "END:VEVENT\r\n";
       }
+      $ics .= "END:VEVENT\r\n";
     }
 
     $ics .= "END:VCALENDAR\r\n";
