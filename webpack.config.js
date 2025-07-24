@@ -21,7 +21,7 @@ module.exports = (env, arg) => {
     // stats: 'verbose',
     entry: {
       hubleto: [
-        './vendor/hubleto/main/Main',
+        './vendor/hubleto/main/src/Main',
         // './repositories.tsx',
         ...loadEntriesFromRepository(path.resolve(__dirname, 'vendor/hubleto/main/apps')),
         // ...loadEntriesFromRepository(path.resolve(__dirname, '../apps')),
@@ -69,7 +69,7 @@ module.exports = (env, arg) => {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss', '.css'],
       alias: {
         '@hubleto/core': path.resolve(__dirname, 'vendor', 'hubleto', 'framework', 'src'),
-        '@adios': path.resolve(__dirname, 'vendor', 'hubleto', 'framework', 'src/Adios', 'components'),
+        '@adios': path.resolve(__dirname, 'vendor', 'hubleto', 'framework', 'src/Legacy', 'Components'),
         '@hubleto/apps': path.resolve(__dirname, 'vendor', 'hubleto', 'main', 'apps'),
       },
     }
