@@ -26,16 +26,6 @@ module.exports = (env, arg) => {
         ...loadEntriesFromRepository(path.resolve(__dirname, 'vendor/hubleto/main/apps')),
         // ...loadEntriesFromRepository(path.resolve(__dirname, '../apps')),
       ],
-      // framework: [
-      //   path.resolve(__dirname, 'vendor/hubleto/framework/src-adios/Assets/Js/adios.js'),
-      //   path.resolve(__dirname, 'vendor/hubleto/framework/src-adios/Assets/Js/ajax_functions.js'),
-      //   path.resolve(__dirname, 'vendor/hubleto/framework/src-adios/Assets/Js/base64.js'),
-      //   path.resolve(__dirname, 'vendor/hubleto/framework/src-adios/Assets/Js/cookie.js'),
-      //   path.resolve(__dirname, 'vendor/hubleto/framework/src-adios/Assets/Js/desktop.js'),
-      //   path.resolve(__dirname, 'vendor/hubleto/framework/src-adios/Assets/Js/jquery-3.5.1.js'),
-      //   path.resolve(__dirname, 'vendor/hubleto/framework/src-adios/Assets/Js/md5.js'),
-      //   path.resolve(__dirname, 'vendor/hubleto/framework/src-adios/Assets/Js/moment.min.js'),
-      // ],
     },
     output: {
       path: path.resolve(__dirname, 'assets/compiled/js'),
@@ -79,7 +69,7 @@ module.exports = (env, arg) => {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss', '.css'],
       alias: {
         '@hubleto/core': path.resolve(__dirname, 'vendor', 'hubleto', 'framework', 'src'),
-        '@adios': path.resolve(__dirname, 'vendor', 'hubleto', 'framework', 'src-adios', 'components'),
+        '@adios': path.resolve(__dirname, 'vendor', 'hubleto', 'framework', 'src/Adios', 'components'),
         '@hubleto/apps': path.resolve(__dirname, 'vendor', 'hubleto', 'main', 'apps'),
       },
     }
