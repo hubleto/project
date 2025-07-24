@@ -18,11 +18,11 @@
     },
     "autoload": {
         "psr-4": {
-            "HubletoApp\\Custom\\": "apps",
-            "HubletoProject\\Hook\\": "hooks",
-            "HubletoProject\\Cron\\": "crons",
-            "HubletoProject\\Report\\": "reports",
-            "HubletoProject\\Dependency\\": "dependencies"
+            "HubletoApp\\Custom\\": "src/apps",
+            "HubletoProject\\Hook\\": "src/hooks",
+            "HubletoProject\\Cron\\": "src/crons",
+            "HubletoProject\\Report\\": "src/reports",
+            "HubletoProject\\Dependency\\": "src/dependencies"
         }
     },
     "repositories": [
