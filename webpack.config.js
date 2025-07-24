@@ -21,7 +21,7 @@ module.exports = (env, arg) => {
     // stats: 'verbose',
     entry: {
       hubleto: [
-        './vendor/hubleto/main/src/Main',
+        './vendor/hubleto/main/Main',
         // './repositories.tsx',
         ...loadEntriesFromRepository(path.resolve(__dirname, 'vendor/hubleto/main/apps')),
         // ...loadEntriesFromRepository(path.resolve(__dirname, '../apps')),
