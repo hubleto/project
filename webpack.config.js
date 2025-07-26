@@ -68,9 +68,9 @@ module.exports = (env, arg) => {
       modules: [ path.resolve(__dirname, './node_modules') ],
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss', '.css'],
       alias: {
-        '@hubleto/core': path.resolve(__dirname, 'vendor', 'hubleto', 'framework', 'src'),
-        '@adios': path.resolve(__dirname, 'vendor', 'hubleto', 'framework', 'src/Legacy', 'Components'),
-        '@hubleto/apps': path.resolve(__dirname, 'vendor', 'hubleto', 'main', 'apps'),
+        '@hubleto/ui/core': path.resolve(__dirname, 'vendor/hubleto/framework/src/Components/Core'),
+        '@hubleto/ui/ext': path.resolve(__dirname, 'vendor/hubleto/framework/src/Components/Ext'),
+        '@hubleto/apps': path.resolve(__dirname, 'vendor/hubleto/main/apps'),
       },
     }
   }

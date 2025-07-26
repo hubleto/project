@@ -9,10 +9,7 @@
     },
     "keywords": ["hubleto", "crm", "erp", "application", "hub"],
     "require": {
-        "hubleto/framework": "@dev",
-        "hubleto/main": "@dev"
-    },
-    "require-dev": {
+        "hubleto/terminal": "@dev",
         "hubleto/framework": "@dev",
         "hubleto/main": "@dev"
     },
@@ -26,6 +23,10 @@
         }
     },
     "repositories": [
+        {
+            "type": "path",
+            "url": "../terminal"
+        },
         {
             "type": "path",
             "url": "../framework"
