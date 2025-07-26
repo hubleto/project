@@ -9,8 +9,6 @@
     },
     "keywords": ["hubleto", "crm", "erp", "application", "hub"],
     "require": {
-        "hubleto/terminal": "@dev",
-        "hubleto/framework": "@dev",
         "hubleto/main": "@dev"
     },
     "autoload": {
@@ -35,5 +33,6 @@
             "type": "path",
             "url": "../main"
         }
-    ]
+    ],
+    "minimum-stability": "dev"
 }
