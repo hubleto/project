@@ -25,11 +25,6 @@ Follow the steps described below to install everything.
   * `cd /var/www/html/hubleto`
   * `git clone https://github.com/hubleto/framework.git`
 
-### Prepare `hubleto/main`
-
-  * `cd /var/www/html/hubleto`
-  * `git clone https://github.com/hubleto/main.git`
-
 ### Prepare `@hubleto/react-ui` package
 
   * `cd /var/www/html/hubleto`
@@ -37,6 +32,11 @@ Follow the steps described below to install everything.
   * `cd react-ui`
   * `npm install`
   * `npm link`
+
+### Prepare `hubleto/main`
+
+  * `cd /var/www/html/hubleto`
+  * `git clone https://github.com/hubleto/main.git`
 
 ### Install `hubleto/project` into your `dev` folder
 
