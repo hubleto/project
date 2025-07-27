@@ -13,7 +13,7 @@ Now, your Hubleto is ready to be used. You may develop your own apps. Check http
 
 If you want to contribute to Hubleto core development, you need to do some more steps. You will need to download & install:
 
-  * `hubleto/framework` - the backend framework used by Hubleto ERP
+  * `hubleto/framework` - the MVC-based backend framework used by Hubleto ERP
   * `@hubleto/react-ui` - the React-based frontend library used by Hubleto ERP
   * `hubleto/main` - the ERP functionality built on top of the framework and UI library
   * `hubleto/project` - contents of the development folder

@@ -4732,13 +4732,13 @@ body.ajax-loading #logo {
   text-align: left;
 }
 @layer hubleto-framework {
-  .adios.component.table {
+  .hubleto.component.table {
     width: 100%;
   }
-  .adios.component.table.loading {
+  .hubleto.component.table.loading {
     opacity: 0.25;
   }
-  .adios.component.table .table-header {
+  .hubleto.component.table .table-header {
     margin-bottom: calc(var(--spacing) * 2);
     display: flex;
     flex-direction: column;
@@ -4749,14 +4749,14 @@ body.ajax-loading #logo {
       flex-direction: row;
     }
   }
-  .adios.component.table .table-header-left {
+  .hubleto.component.table .table-header-left {
     display: flex;
     width: 100%;
     flex: 1;
     align-items: center;
     gap: calc(var(--spacing) * 1);
   }
-  .adios.component.table .table-header-title {
+  .hubleto.component.table .table-header-title {
     margin-right: calc(var(--spacing) * 2);
     flex: 1;
     text-align: center;
@@ -4768,14 +4768,14 @@ body.ajax-loading #logo {
       color: var(--color-white);
     }
   }
-  .adios.component.table .table-header-right {
+  .hubleto.component.table .table-header-right {
     display: flex;
     flex: 1;
     justify-content: flex-end;
     gap: calc(var(--spacing) * 1);
     text-align: center;
   }
-  .adios.component.table .table-header-search {
+  .hubleto.component.table .table-header-search {
     display: flex;
     width: 100%;
     flex: 4;
@@ -4790,10 +4790,10 @@ body.ajax-loading #logo {
       background-color: var(--color-slate-950);
     }
   }
-  .adios.component.table .table-header-search.active {
+  .hubleto.component.table .table-header-search.active {
     background-color: var(--color-yellow-50);
   }
-  .adios.component.table .table-body {
+  .hubleto.component.table .table-body {
     border-style: var(--tw-border-style);
     border-width: 1px;
     border-color: var(--color-slate-200);
@@ -4802,7 +4802,7 @@ body.ajax-loading #logo {
       border-style: none;
     }
   }
-  .adios.component.table .table-body tr {
+  .hubleto.component.table .table-body tr {
     :where(& > :not(:last-child)) {
       --tw-divide-x-reverse: 0;
       border-inline-style: var(--tw-border-style);
@@ -4819,32 +4819,32 @@ body.ajax-loading #logo {
     }
     box-sizing: border-box;
   }
-  .adios.component.table .table-body tr:hover td {
+  .hubleto.component.table .table-body tr:hover td {
     background-color: var(--color-gray-100);
     &:where(.dark, .dark *) {
       background-color: var(--color-slate-800);
     }
   }
-  .adios.component.table .table-body thead th td {
+  .hubleto.component.table .table-body thead th td {
     padding: calc(var(--spacing) * 0.5);
     margin: 1px;
   }
-  .adios.component.table .table-body thead th td {
+  .hubleto.component.table .table-body thead th td {
     padding: calc(var(--spacing) * 0.5);
     margin: 1px;
   }
-  .adios.component.table .table-body tbody tr td {
+  .hubleto.component.table .table-body tbody tr td {
     padding: calc(var(--spacing) * 0.5);
     margin: 1px;
   }
-  .adios.component.table .table-body tbody tr td .inline-edit-icon {
+  .hubleto.component.table .table-body tbody tr td .inline-edit-icon {
     visibility: hidden;
     cursor: pointer;
   }
-  .adios.component.table .table-body tbody tr td:hover .inline-edit-icon {
+  .hubleto.component.table .table-body tbody tr td:hover .inline-edit-icon {
     visibility: visible;
   }
-  .adios.component.table .table-body tr.highlighted {
+  .hubleto.component.table .table-body tr.highlighted {
     :where(& > :not(:last-child)) {
       --tw-border-style: none;
       border-style: none;
@@ -4856,25 +4856,25 @@ body.ajax-loading #logo {
     border-left-color: var(--color-primary);
     color: var(--color-primary);
   }
-  .adios.component.table .table-body tr.highlighted td:nth-child(1) > div {
+  .hubleto.component.table .table-body tr.highlighted td:nth-child(1) > div {
     padding-left: calc(var(--spacing) * 2);
   }
-  .adios.component.table .table-body tr td {
+  .hubleto.component.table .table-body tr td {
     cursor: pointer;
   }
-  .adios.component.input.table {
+  .hubleto.component.input.table {
     max-width: 100%;
   }
-  .adios.component.table.header-style-1 {
+  .hubleto.component.table.header-style-1 {
     background-color: var(--color-green-50);
   }
-  .adios.component.table .table-body tbody tr td .to-be-deleted {
+  .hubleto.component.table .table-body tbody tr td .to-be-deleted {
     background-color: var(--color-red-500);
   }
-  .adios.component.table .table-body tbody tr td .to-be-deleted input {
+  .hubleto.component.table .table-body tbody tr td .to-be-deleted input {
     color: var(--color-red-500);
   }
-  .adios.component.table .table-cell-content {
+  .hubleto.component.table .table-cell-content {
     max-width: calc(var(--spacing) * 48);
     overflow: hidden;
     text-overflow: ellipsis;
@@ -4884,50 +4884,50 @@ body.ajax-loading #logo {
       max-width: none;
     }
   }
-  .adios.component.table .table-cell-content.column-lookup {
+  .hubleto.component.table .table-cell-content.column-lookup {
     color: var(--color-primary);
     &:where(.dark, .dark *) {
       color: var(--color-white);
     }
   }
-  .adios.component.table .table-cell-content.column-int {
+  .hubleto.component.table .table-cell-content.column-int {
     text-align: right;
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .adios.component.table .table-cell-content.column-float {
+  .hubleto.component.table .table-cell-content.column-float {
     text-align: right;
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .adios.component.table .table-cell-content.column-date {
+  .hubleto.component.table .table-cell-content.column-date {
     text-align: right;
   }
-  .adios.component.table .table-cell-content.column-datetime {
+  .hubleto.component.table .table-cell-content.column-datetime {
     text-align: right;
   }
-  .adios.component.table .table-cell-content.column-boolean {
+  .hubleto.component.table .table-cell-content.column-boolean {
     text-align: center;
   }
-  .adios.component.table .table-sidebar-filter {
+  .hubleto.component.table .table-sidebar-filter {
     display: none;
     @media (width >= 48rem) {
       display: block;
     }
   }
-  .adios.component.table .column-search .input-element {
+  .hubleto.component.table .column-search .input-element {
     background-color: var(--color-white);
     &:where(.dark, .dark *) {
       background-color: var(--color-slate-800);
     }
   }
-  .adios.component.input {
+  .hubleto.component.input {
     display: inline-flex;
     width: 100%;
     align-items: center;
     justify-content: space-between;
   }
-  .adios.component.input input, .adios.component.input textarea, .adios.component.input select {
+  .hubleto.component.input input, .hubleto.component.input textarea, .hubleto.component.input select {
     display: flex;
     width: 100%;
     flex: 1;
@@ -4940,23 +4940,23 @@ body.ajax-loading #logo {
       border-color: var(--color-slate-500);
     }
   }
-  .adios.component.input.int input {
+  .hubleto.component.input.int input {
     max-width: 160px;
   }
-  .adios.component.input.date input {
+  .hubleto.component.input.date input {
     max-width: 160px;
   }
-  .adios.component.input.datetime input {
+  .hubleto.component.input.datetime input {
     max-width: 160px;
   }
-  .adios.component.input .inner {
+  .hubleto.component.input .inner {
     display: flex;
     width: 100%;
     align-items: center;
     gap: calc(var(--spacing) * 1);
     border-radius: 0.25rem;
   }
-  .adios.component.input .inner .value-element {
+  .hubleto.component.input .inner .value-element {
     margin-right: calc(var(--spacing) * 1);
     display: inline-flex;
     flex: 1;
@@ -4967,7 +4967,7 @@ body.ajax-loading #logo {
     }
     min-height: 1.5rem;
   }
-  .adios.component.input .inner .input-element {
+  .hubleto.component.input .inner .input-element {
     margin-right: calc(var(--spacing) * 1);
     display: flex;
     flex: 1;
@@ -4980,7 +4980,7 @@ body.ajax-loading #logo {
     }
     min-height: 1.5rem;
   }
-  .adios.component.input .inner .value-element .no-value {
+  .hubleto.component.input .inner .value-element .no-value {
     color: var(--color-gray-300);
     font-style: italic;
     &::after {
@@ -4989,39 +4989,39 @@ body.ajax-loading #logo {
       content: var(--tw-content);
     }
   }
-  .adios.component.input .inner .inline-editing-buttons {
+  .hubleto.component.input .inner .inline-editing-buttons {
     visibility: hidden;
     display: flex;
     flex: 1;
     gap: calc(var(--spacing) * 1);
   }
-  .adios.component.input .inner .inline-editing-buttons.always-visible {
+  .hubleto.component.input .inner .inline-editing-buttons.always-visible {
     visibility: visible !important;
   }
-  .adios.component.input .inner .btn {
+  .hubleto.component.input .inner .btn {
     --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .adios.component.input .inner:hover .inline-editing-buttons {
+  .hubleto.component.input .inner:hover .inline-editing-buttons {
     visibility: visible !important;
   }
-  .adios.component.input .input-after {
+  .hubleto.component.input .input-after {
     margin-left: calc(var(--spacing) * 2);
     flex: 1;
   }
-  .adios.component.input .input-unit {
+  .hubleto.component.input .input-unit {
     margin-left: calc(var(--spacing) * 2);
     flex: 1;
   }
 }
 @layer hubleto-framework {
-  #app-main-content > * > .adios.component.table .table-body thead th:nth-child(n+4) {
+  #app-main-content > * > .hubleto.component.table .table-body thead th:nth-child(n+4) {
     display: none;
     @media (width >= 48rem) {
       display: table-cell;
     }
   }
-  #app-main-content > * > .adios.component.table .table-body tbody tr td:nth-child(n+4) {
+  #app-main-content > * > .hubleto.component.table .table-body tbody tr td:nth-child(n+4) {
     display: none;
     @media (width >= 48rem) {
       display: table-cell;
@@ -7076,13 +7076,13 @@ body.ajax-loading #logo {
     padding-inline: calc(var(--spacing) * 1);
     padding-block: calc(var(--spacing) * 1);
   }
-  .adios-lookup[class*='-container'] {
+  .hubleto-lookup[class*='-container'] {
     width: 100%;
   }
-  .adios-lookup *[class*='-indicator'] {
+  .hubleto-lookup *[class*='-indicator'] {
     padding: 0px !important;
   }
-  .adios-lookup *[class*='-control'] {
+  .hubleto-lookup *[class*='-control'] {
     width: 100% !important;
     border-radius: var(--radius-sm);
     background-color: var(--color-white) !important;
@@ -7094,35 +7094,35 @@ body.ajax-loading #logo {
     }
     min-height: auto !important;
   }
-  .adios-lookup *[class*='-control'] > div {
+  .hubleto-lookup *[class*='-control'] > div {
     padding-bottom: 0px !important;
     padding-top: 0px !important;
   }
-  .adios-lookup *[class*='-input-container'] {
+  .hubleto-lookup *[class*='-input-container'] {
     margin: calc(var(--spacing) * 0) !important;
     padding: calc(var(--spacing) * 0.5) !important;
     min-width: 2em;
   }
-  .adios-lookup *[class*='-ValueContainer'] {
+  .hubleto-lookup *[class*='-ValueContainer'] {
     padding: calc(var(--spacing) * 0) !important;
   }
-  .adios-lookup *[class*='-singleValue'] {
+  .hubleto-lookup *[class*='-singleValue'] {
     &:where(.dark, .dark *) {
       color: var(--color-white) !important;
     }
   }
-  .adios-lookup *[class*='-Input'] {
+  .hubleto-lookup *[class*='-Input'] {
     font-size: var(--text-sm) !important;
     line-height: var(--tw-leading, var(--text-sm--line-height)) !important;
   }
-  .adios-lookup *[class*='-menu'] * {
+  .hubleto-lookup *[class*='-menu'] * {
     font-size: var(--text-sm) !important;
     line-height: var(--tw-leading, var(--text-sm--line-height)) !important;
   }
-  .adios-lookup > div > div {
+  .hubleto-lookup > div > div {
     padding: calc(var(--spacing) * 0);
   }
-  .adios-lookup > div > div > div {
+  .hubleto-lookup > div > div > div {
     padding: calc(var(--spacing) * 0);
   }
 }

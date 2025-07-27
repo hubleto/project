@@ -7,11 +7,11 @@ module.exports = {
     "./node_modules/primereact/**/*.{js,ts,jsx,tsx}",
   ],
   safelist: [
-    'adios-lookup__indicator',
-    'adios-lookup__control',
-    'adios-lookup__input-container',
-    'adios-lookup__value-container',
-    'adios-lookup__input',
+    'hubleto-lookup__indicator',
+    'hubleto-lookup__control',
+    'hubleto-lookup__input-container',
+    'hubleto-lookup__value-container',
+    'hubleto-lookup__input',
   ],
   plugins: [],
 }

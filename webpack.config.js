@@ -54,11 +54,6 @@ module.exports = (env, arg) => {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all'
-          },
-          adios: {
-            test: /[\\/](ADIOS|adios)[\\/]/,
-            name: 'adios',
-            chunks: 'all'
           }
         }
       }
