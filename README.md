@@ -35,6 +35,15 @@ Prepare dev folder:
   * `mkdir dev`
   * `cd dev`
   * `composer create-project hubleto/project`
+
+Now change `package.json` file to link to your local `react-ui` package. Set `@hubleto/react-ui` dependency to following:
+
+```
+"@hubleto/react-ui": "file:../react-ui",
+```
+
+Install:
+
   * `composer install`
   * `npm link @hubleto/react-ui`
   * `npm install`
