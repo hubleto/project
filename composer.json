@@ -1,6 +1,6 @@
 {
     "name": "hubleto/project",
-    "license": "GPL-3.0-only",
+    "license": "MIT",
     "description": "Business Application Hub. Opensource ERP and CRM.",
     "homepage": "https://www.hubleto.com",
     "support": {
