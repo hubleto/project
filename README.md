@@ -7,9 +7,11 @@ If you want to download and install Hubleto and use it, simply run following com
   * `composer create-project hubleto/project .` to create an empty project
   * `php hubleto init` to install database and required configs
 
+Now, your Hubleto is ready to be used. You may develop your own apps. Check https://developer.hubleto.com for more information.
+
 ## Development environment
 
-If you want to contribute to Hubleto development, you need to do some more steps. You will need to download & install:
+If you want to contribute to Hubleto core development, you need to do some more steps. You will need to download & install:
 
   * `hubleto/framework` - the backend framework used by Hubleto ERP
   * `hubleto/main` - the complete Hubleto ERP platform
@@ -26,7 +28,7 @@ Follow the steps described below to install everything.
 ### Prepare `hubleto/main`
 
   * `cd /var/www/html/hubleto`
-  * `git clone https://github.com/hubleto/framework.git`
+  * `git clone https://github.com/hubleto/main.git`
 
 ### Prepare `@hubleto/react-ui` package
 
