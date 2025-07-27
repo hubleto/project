@@ -1,6 +1,6 @@
 {
-  "name": "hubleto",
-  "version": "1.0.0",
+  "name": "@hubleto/project",
+  "version": "0.14",
   "description": "",
   "main": "index.js",
   "scripts": {
