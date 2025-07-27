@@ -2,26 +2,33 @@
 
 ## Instalation
 
-  * `composer create-project hubleto/project`
-  * `composer install`
-  * `npm install`
-  * `npm run build-js`
-  * `npm run build-css`
-  * `php hubleto init`
+If you want to download and install Hubleto and use it, simply run following commands in any folder:
+
+  * `composer create-project hubleto/project .` to create an empty project
+  * `php hubleto init` to install database and required configs
 
 ## Development environment
 
-Prepare `hubleto/framework`:
+If you want to contribute to Hubleto development, you need to do some more steps. You will need to download & install:
+
+  * `hubleto/framework` - the backend framework used by Hubleto ERP
+  * `hubleto/main` - the complete Hubleto ERP platform
+  * `@hubleto/react-ui` - the React-based frontend library used by Hubleto ERP
+  * `hubleto/project` - contents of the development folder
+
+Follow the steps described below to install everything.
+
+### Prepare `hubleto/framework`
 
   * `cd /var/www/html/hubleto`
   * `git clone https://github.com/hubleto/framework.git`
 
-Prepare `hubleto/main`:
+### Prepare `hubleto/main`
 
   * `cd /var/www/html/hubleto`
   * `git clone https://github.com/hubleto/framework.git`
 
-Prepare `react-ui` package:
+### Prepare `@hubleto/react-ui` package
 
   * `cd /var/www/html/hubleto`
   * `git clone https://github.com/hubleto/react-ui.git`
@@ -29,25 +36,15 @@ Prepare `react-ui` package:
   * `npm install`
   * `npm link`
 
-Prepare dev folder:
+### Install `hubleto/project` into your `dev` folder
 
-  * `cd /var/www/html/hubleto`
-  * `mkdir dev`
-  * `cd dev`
-  * `composer create-project hubleto/project`
+Here we assume you will be installing your development version of Hubleto in the folder named `dev`. You may change this to any other folder name.
 
-Now change `package.json` file to link to your local `react-ui` package. Set `@hubleto/react-ui` dependency to following:
-
-```
-"@hubleto/react-ui": "file:../react-ui",
-```
-
-Install:
-
+  * `cd /var/www/html/hubleto/dev`
+  * `composer create-project hubleto/project .`
   * `composer install`
-  * `npm link @hubleto/react-ui`
-  * `npm install`
-  * `npm run build`
   * `php hubleto init`
+  * `npm link @hubleto/react-ui`
+  * `npm run build`
 
 You may then use `npm run watch-js` or `npm run watch-css` for fast rebuild during the development.
